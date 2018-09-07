@@ -17,4 +17,5 @@ public interface CategoryDao {
      * @return
      */
     List<Category> queryCategory();
+    int insertCategory(Category category);
 }

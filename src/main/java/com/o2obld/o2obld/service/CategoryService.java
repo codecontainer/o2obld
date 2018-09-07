@@ -1,5 +1,6 @@
 package com.o2obld.o2obld.service;
 
+import com.o2obld.o2obld.dto.CategoryResult;
 import com.o2obld.o2obld.entity.Category;
 
 import java.util.List;
@@ -13,4 +14,5 @@ import java.util.List;
  */
 public interface CategoryService {
     List<Category> getCategoryList();
+    CategoryResult insertCategroy(Category categroy);
 }

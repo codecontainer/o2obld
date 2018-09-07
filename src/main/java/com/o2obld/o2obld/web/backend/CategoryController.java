@@ -40,7 +40,5 @@ public class CategoryController {
             model.put("ErrMsg",e.getMessage());
         }
         return  model;
-
-
     }
 }

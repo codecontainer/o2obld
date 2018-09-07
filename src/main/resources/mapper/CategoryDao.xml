@@ -7,6 +7,14 @@
         SELECT id,category_name,parant_id,description,sort
         FROM category ORDER BY sort DESC
     </select>
+    <insert id="insertCategory" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO
+		category(category_name,parant_id,sort,
+		description)
+		VALUES
+		(#{categoryName},#{parentId},#{sort},
+		#{description})
+    </insert>
 </mapper>
 
 
