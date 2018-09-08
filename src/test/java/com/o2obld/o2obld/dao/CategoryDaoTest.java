@@ -24,5 +24,16 @@ public class CategoryDaoTest extends BaseTest {
         List<Category>  categoryList=categoryDao.queryCategory();
         assertEquals(1,categoryList.size());
     }
+    @Test
+    public void insertCategoryTest(){
+        Category category=new Category();
+        category.setCategoryName("测试二");
+        category.setDescription("测试信息");
+        category.setParentId(0);
+        category.setSort(1);
+        int result=categoryDao.insertCategory(category);
+        assertEquals(1,result);
+
+    }
 
 }

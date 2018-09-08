@@ -10,7 +10,7 @@ package com.o2obld.o2obld.entity;
 public class Category {
     private Integer id;
     private String categoryName;
-    private Integer parantId;
+    private Integer parentId;
     private String description;
     private Integer sort;
 
@@ -38,12 +38,12 @@ public class Category {
         this.id = id;
     }
 
-    public Integer getParantId() {
-        return parantId;
+    public Integer getParentId() {
+        return parentId;
     }
 
-    public void setParantId(Integer parantId) {
-        this.parantId = parantId;
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
     }
 
     public Integer getSort() {

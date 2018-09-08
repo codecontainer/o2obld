@@ -24,4 +24,7 @@ public class CategoryServiceTest extends BaseTest {
         List<Category> categoryList=categoryService.getCategoryList();
         assertEquals("测试1",categoryList.get(0).getCategoryName());
     }
+
+
+
 }
