@@ -2,6 +2,28 @@
  * Created by administered on 2018-09-08.
  */
 $(function() {
+    getlist();
+    function getlist() {
+        $.ajax({
+            url : "/o2o/category/getlist",
+            type : "get",
+            dataType : "json",
+            success : function(data) {
+                    handleList(data);
+
+            }
+        });
+    }
+    function handleList(data) {
+        var html = '';
+        html=$('#parentid').html();
+        data.map(function (item, index) {
+
+            html +="<option id='"+item.id+"'>"+item.categoryName+"</option>";;
+        });
+        $('#parentid').html(html);
+    }
+
 
     var registerUrl = '/o2o/category/add';
     $('#submit').click(function() {
