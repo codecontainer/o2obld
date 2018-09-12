@@ -18,4 +18,6 @@ public interface CategoryDao {
      */
     List<Category> queryCategory();
     int insertCategory(Category category);
+    int updateCategory(Category category);
+    int deleteCategory(Long categoryId);
 }

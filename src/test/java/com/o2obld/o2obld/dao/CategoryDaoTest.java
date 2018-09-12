@@ -35,5 +35,24 @@ public class CategoryDaoTest extends BaseTest {
         assertEquals(1,result);
 
     }
+    @Test
+    public void deleteCategoryTest(){
+        int num=categoryDao.deleteCategory(4L);
+        assertEquals(1,num);
+
+    }
+    @Test
+    public void updateCategoryTest(){
+        Category category=new Category();
+        category.setId(1);
+        category.setCategoryName("测试修改");
+        category.setSort(10);
+        category.setParentId(1);
+        category.setDescription("测试修改信息");
+        int num=categoryDao.updateCategory(category);
+        assertEquals(1,num);
+    }
+
+
 
 }

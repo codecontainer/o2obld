@@ -19,7 +19,7 @@ $(function() {
         html=$('#parentid').html();
         data.map(function (item, index) {
 
-            html +="<option id='"+item.id+"'>"+item.categoryName+"</option>";;
+            html +="<option value='"+item.id+"'>"+item.categoryName+"</option>";;
         });
         $('#parentid').html(html);
     }
